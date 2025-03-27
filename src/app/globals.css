@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.wavvy {
+  text-decoration: underline wavy #4e4b4b;
+}

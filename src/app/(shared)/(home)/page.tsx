@@ -1,10 +1,35 @@
+import AvatarHairpin from "@/components/Home/AvatarHairpin";
+import Bento from "@/components/Home/Bento";
+import { Intro } from "@/components/Home/Intro";
+import BlurFade from "@/components/ui/BlurFade";
+
 const page = () => {
     return(
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Nick's Space!</h1>
-            <p className="text-lg mb-2">This is a place for all my projects and ideas.</p>
-            <p className="text-lg mb-2">Feel free to explore and reach out if you have any questions!</p>
+       <section className="pb-3 pt-8 md:mt-8 md:pb-16 lg:mt-10">
+        <div className="flex flex-col items-start justify-start gap-5 md:flex-row md:items-center md:justify-between">
+            {' '}
+            <div>
+                {' '}
+                <BlurFade delay={0.5}>
+                    <h1 className="mb-1 mt-0 text-3xl font-semibold dark:text-white">
+                        Sagnick Manna
+                    </h1>
+                </BlurFade>
+                <BlurFade delay={0.6}>
+                    <div className="max-w-[58ch] text-zinc-600 dark:text-zinc-400">
+                        Full Stack Engineer
+                    </div>
+                    </BlurFade>
+            </div>{''}
+            <AvatarHairpin />
         </div>
+        <BlurFade delay={0.7}>
+            <Intro />
+        </BlurFade>
+        <BlurFade delay={0.7}>
+            <Bento />
+        </BlurFade>
+       </section>
     )
 };
 
