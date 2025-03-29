@@ -3,9 +3,6 @@ import Link from "next/link"
 import { Separator } from "../ui/separator"
 
 
-
-
-
 export const Intro = () => {
   return (
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">

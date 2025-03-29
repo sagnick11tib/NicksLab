@@ -1,6 +1,11 @@
-import Car from "./FuturisticCpuCabinet";
-import CabinetIcon from "./FuturisticCpuCabinet";
 
+
+import GithubCard from "./Cabinet/GithubCard";
+import GithubStats from "./Cabinet/GithubStatsClient";
+import GithubStatsServer from "./Cabinet/GithubStatsServer";
+import KrishnaLinkCard from "./Cabinet/KrishnaLinkCard";
+import RandomCard from "./Cabinet/RandomCard";
+import Car from "./Car";
 
 
 const Bento = () => {
@@ -10,8 +15,23 @@ const Bento = () => {
         <p className="font-neu underline underline-offset-2">Cabinet</p>
         <Car className="w-10 h-10" />
         </div>
-        <div className="hidden grid-cols-5 grid-rows-6 gap-4 xs:grid">
-            
+        <div className="grid md:grid-cols-6 grid-cols-3 mt-8 gap-3">
+            <div className="col-span-3">
+              <GithubCard/>
+            </div>
+            <div className="col-span-2">
+              <GithubStatsServer />
+            </div>
+            <RandomCard />
+        </div>
+        <div className="grid md:grid-cols-6 grid-cols-3 mt-3">
+        <div className="flex flex-col col-span-3">
+        <div className="flex gap-3">
+        <div className="w-24">
+              <KrishnaLinkCard />
+        </div>
+        </div>
+        </div>
         </div>
       </div>
     )
