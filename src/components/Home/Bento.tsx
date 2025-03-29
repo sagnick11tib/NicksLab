@@ -4,7 +4,9 @@ import GithubCard from "./Cabinet/GithubCard";
 import GithubStats from "./Cabinet/GithubStatsClient";
 import GithubStatsServer from "./Cabinet/GithubStatsServer";
 import KrishnaLinkCard from "./Cabinet/KrishnaLinkCard";
+import LinkedinCard from "./Cabinet/LinkedinCard";
 import RandomCard from "./Cabinet/RandomCard";
+import WakatimeStatsCard from "./Cabinet/WakatimeStatsCard";
 import Car from "./Car";
 
 
@@ -30,6 +32,10 @@ const Bento = () => {
         <div className="w-24">
               <KrishnaLinkCard />
         </div>
+        <div className="flex flex-col gap-3 w-full ">
+              <LinkedinCard />
+              <WakatimeStatsCard />
+            </div>
         </div>
         </div>
         </div>
