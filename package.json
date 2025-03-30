@@ -21,7 +21,8 @@
     "react-dom": "^18",
     "recoil": "^0.7.7",
     "sonner": "^2.0.1",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20.17.27",

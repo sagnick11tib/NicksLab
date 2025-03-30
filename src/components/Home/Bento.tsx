@@ -6,6 +6,7 @@ import GithubStatsServer from "./Cabinet/GithubStatsServer";
 import KrishnaLinkCard from "./Cabinet/KrishnaLinkCard";
 import LinkedinCard from "./Cabinet/LinkedinCard";
 import RandomCard from "./Cabinet/RandomCard";
+import StacksCard from "./Cabinet/StacksCard";
 import WakatimeStatsCard from "./Cabinet/WakatimeStatsCard";
 import Car from "./Car";
 
@@ -38,7 +39,7 @@ const Bento = () => {
             </div>
         </div>
         <div className="cols-span-3 ">
-            {/* <StacksCard /> */}
+            <StacksCard />
           </div>
         </div>
         <div className="col-span-3 md:ml-3">
