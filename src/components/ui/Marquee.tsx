@@ -10,36 +10,35 @@ type MarqueeProps = {
   className?: string;
 };
 
-const range = (start: number, end: number): number[] =>  Array.from({ length: end - start }, (_, k) => k + start);
+const range = (start: number, end: number): number[] =>
+  Array.from({ length: end - start }, (_, k) => k + start);
 
 const Marquee = (props: MarqueeProps) => {
-
-   const {
+  const {
     children,
     direction = "left",
     pauseOnHover = false,
     reverse = false,
     fade = false,
     className,
-   } = props;
+  } = props;
 
-   const ifToRightOrToBottom = (direction: string) => {
+  const ifToRightOrToBottom = (direction: string) => {
+    if (direction === "left") {
+      return "to right";
+    } else {
+      return "to bottom";
+    }
+  };
 
-     if ( direction === "left") {
-        return "to right";
-     } else {
-        return "to bottom";
-     }
-
-   };
-
-   return (
-      <div
+  return (
+    <div
       className={cn(
-        "group flex gap-4 overflow-hidden transform-gpu",
+        "group flex gap-4 overflow-hidden",
         direction === "left" ? "flex-row" : "flex-col",
-        className
+        className,
       )}
+      data-testid="marquee"
       style={{
         maskImage: fade
           ? `linear-gradient(${
@@ -52,8 +51,8 @@ const Marquee = (props: MarqueeProps) => {
             }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
       }}
-      >
-        {range(0, 2).map((i) => (
+    >
+      {range(0, 2).map((i) => (
         <div
           key={i}
           className={cn(
@@ -64,12 +63,13 @@ const Marquee = (props: MarqueeProps) => {
             pauseOnHover && "group-hover:[animation-play-state:paused]",
             reverse && "direction-reverse",
           )}
+          data-testid={`marquee-child-${i + 1}`}
         >
           {children}
         </div>
       ))}
-      </div>
-   )
-}
+    </div>
+  );
+};
 
 export default Marquee;

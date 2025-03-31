@@ -21,7 +21,9 @@ import {
 } from "@/components/Icons/StackIcons";
 import Marquee from "@/components/ui/Marquee";
 
+
 const StacksCard = () => {
+
   return (
     <div className="p-1 flex h-36 flex-col gap-2 overflow-hidden rounded-xl mt-4">
       <Marquee className="" fade pauseOnHover>

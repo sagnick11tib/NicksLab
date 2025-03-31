@@ -42,5 +42,11 @@ const config: Config = {
     },
   },
   plugins: [animate],
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };
 export default config;

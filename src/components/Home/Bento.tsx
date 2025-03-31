@@ -1,5 +1,7 @@
 
 
+import DiscordStatusCard from "./Cabinet/DiscordStatusCard";
+import FavouriteGame from "./Cabinet/FavouriteGame";
 import GithubCard from "./Cabinet/GithubCard";
 import GithubStats from "./Cabinet/GithubStatsClient";
 import GithubStatsServer from "./Cabinet/GithubStatsServer";
@@ -36,19 +38,19 @@ const Bento = () => {
         <div className="flex flex-col gap-3 w-full ">
               <LinkedinCard />
               <WakatimeStatsCard />
-            </div>
+        </div>
         </div>
         <div className="cols-span-3 ">
             <StacksCard />
           </div>
         </div>
         <div className="col-span-3 md:ml-3">
+        <FavouriteGame />
           <div className="flex gap-3 ">
-            {/* <DCStatus /> */}
+           <DiscordStatusCard />
 
-            {/* <ImagesCard /> */}
+            {/* <ImagesCard /> */}  
           </div>
-          {/* <BooksCard /> */}
         </div>
         </div>
       </div>
