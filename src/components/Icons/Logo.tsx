@@ -1,21 +1,172 @@
-'use client'
-import * as React from 'react'
-import { motion } from 'framer-motion'
-import { SVGProps } from 'react'
+"use client";
+import * as React from "react";
+import { motion } from "framer-motion";
+import { SVGProps } from "react";
 const Logo = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={522.667}
-    height={333.333}
-    viewBox="0 0 392 250"
-    {...props}
-  >
-    <motion.path
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692 150" {...props}>
+    {/* Text Path for "NicksLab" */}
+    <defs>
+      <path id="textPath" d="M100,140 Q200,120 300,140" />
+    </defs>
+    <motion.text
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      d="M56.1 3.7C33.9 15.2 10.4 49.6 2.5 82.4c-5.6 23-1.7 34.5 18.4 53.9 10.2 9.7 14 15.5 18.7 28.2 7.5 20.2 12.4 26 24.3 28.6 16.1 3.4 38.9-7.4 61.7-29.4l5.2-4.9.7 3c1.1 5.4 7.1 12.3 16.7 19.4 12.1 9 14.7 11.5 16.9 16.3 2.6 5.7 2.4 7-2.6 17.5-8.7 17.7-10.5 27.1-6.4 32.4 5.1 6.5 15.3.4 19.8-11.9 1.3-3.3 3.2-9.8 4.2-14.5 1.1-4.7 3.1-10.8 4.5-13.5 5.8-11.8 27.9-36.3 57.1-63.4l13.3-12.2 7.3 7.3c7.7 7.7 11.6 14.4 17.1 29.3 7.6 20.6 17.1 27.3 34.7 24.6 17.4-2.7 31.2-11.5 55.2-35.1 17.4-16.9 22.7-23.8 22.7-29.1 0-2.8-.5-4.1-2-4.9-4.1-2.2-8.6.6-22.9 14.4-24.2 23.4-33.7 31.2-45.3 36.6-16.1 7.6-23.5 3.8-30.3-15.8-6.2-17.6-10.2-23.9-20.3-32.2l-4.3-3.5 6.2-8.5c18-24.5 37.4-61.4 42.4-80.6 2-7.9 2-21.6-.1-26-3.2-6.7-10.9-9.3-18.1-6.2-25.3 10.9-53.1 53.6-58.5 89.6-1.3 8.7 0 17 3.9 24.6l2.5 4.9-4.3 3.6c-15.1 12.4-41.4 38.4-53.1 52.3-5 6-9.2 10.8-9.4 10.8-.2 0-2-1.8-4.1-4-2.1-2.2-8.7-8-14.7-12.8-6.9-5.4-11.7-10.1-12.8-12.4-1.8-3.5-1.8-3.9-.2-9.5 3.9-13.4 13.9-29.5 26.1-41.9 14-14.3 34.6-24.2 44.2-21.3 5.4 1.6 8.7.6 10-3.2 1.5-4.2-.7-8.4-5.1-9.7-6.7-2-8.9-2.2-15.4-1.2-19.7 3.2-47.8 24.4-61.4 46.4-6.4 10.4-15.8 20.7-32 35-15.1 13.4-20.1 17.1-28.5 21.1-17.9 8.5-24.2 4.7-33.1-20.1-4.5-12.7-7.6-17.5-16.1-25.3l-6.4-6 6.4-8.8C49 95.6 61.7 73.3 71 51.5c6.2-14.4 8-21.5 8-31.4C79 3.3 69.7-3.3 56.1 3.7zm7.6 22.7c-2.2 10.6-5.5 18.6-17 41-9.1 17.7-17.3 31.7-23.7 40.5-2.7 3.7-3.4 4.1-4.6 3-2.3-2.4-3.4-11.2-2.4-19.3 3-23.9 21.3-55 42-71.2 7.1-5.7 7.9-4.8 5.7 6zm238.3 0c-.6 3.4-2.7 10.1-4.7 15.1-6.9 17.7-29.5 58.8-36.9 67.3l-3.2 3.7-1.6-3.7c-2.2-5.2-2-16.8.4-26.4 2.7-10.5 12.2-29.8 20.1-40.7 6.2-8.7 17.5-20.2 23.4-23.8 3-1.9 3-1.9 3.3.3.2 1.2-.1 4.9-.8 8.2z"
+      transition={{ duration: 2 }}
+      className="text-5xl font-bold text-center text-transparent"
+      fill="url(#textGradient)"
+    >
+      <textPath href="#textPath" startOffset="50%" textAnchor="middle">
+        NicksLab
+      </textPath>
+    </motion.text>
+
+    {/* Path 1 - Lab Flask Base */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 3,
+        ease: "easeInOut",
+      }}
+      d="M150,50 L170,100 L130,250 L270,250 L230,100 L250,50 Z"
+      stroke="url(#gradient1)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
     />
+
+    {/* Path 2 - Bubbles and Molecules */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 4,
+        ease: "easeInOut",
+        delay: 0.5,
+      }}
+      d="M160,150 C180,140 190,160 170,170 M200,120 C220,110 230,130 210,140 M240,160 C260,150 270,170 250,180"
+      stroke="url(#gradient2)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    {/* Path 3 - DNA Helix Pattern */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 3.5,
+        ease: "easeInOut",
+        delay: 1,
+      }}
+      d="M50,150 C100,100 150,200 200,150 C250,100 300,200 350,150"
+      stroke="url(#gradient3)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    {/* Path 4 - Circuit Board Lines */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 4.5,
+        ease: "easeInOut",
+        delay: 1.5,
+      }}
+      d="M50,50 L100,50 L100,100 L150,100 M250,100 L300,100 L300,50 L350,50"
+      stroke="url(#gradient4)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    {/* Path 5 - Lab Equipment */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 5,
+        ease: "easeInOut",
+        delay: 2,
+      }}
+      d="M80,200 L120,200 C130,200 130,180 120,180 L80,180 C70,180 70,200 80,200 M280,200 L320,200 C330,200 330,180 320,180 L280,180 C270,180 270,200 280,200"
+      stroke="url(#gradient5)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    {/* Path 6 - Connecting Network */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 4,
+        ease: "easeInOut",
+        delay: 2.5,
+      }}
+      d="M50,250 Q125,200 200,250 Q275,300 350,250 M50,230 Q125,180 200,230 Q275,280 350,230"
+      stroke="url(#gradient6)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    {/* Path 7 - Data Flow */}
+    <motion.path
+      initial={{ pathLength: 0, opacity: 0 }}
+      animate={{ pathLength: 1, opacity: 1 }}
+      transition={{
+        duration: 3.5,
+        ease: "easeInOut",
+        delay: 3,
+      }}
+      d="M30,100 Q100,50 170,100 Q240,150 310,100 Q380,50 450,100"
+      stroke="url(#gradient7)"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+    />
+
+    <defs>
+      <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="50%" stopColor="#C084FC" />
+        <stop offset="100%" stopColor="#F472B6" />
+      </linearGradient>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#C084FC" />
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#C084FC" />
+        <stop offset="100%" stopColor="#F472B6" />
+      </linearGradient>
+      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#F472B6" />
+        <stop offset="100%" stopColor="#60A5FA" />
+      </linearGradient>
+      <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#818CF8" />
+        <stop offset="100%" stopColor="#E879F9" />
+      </linearGradient>
+      <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#E879F9" />
+        <stop offset="100%" stopColor="#FCA5A5" />
+      </linearGradient>
+      <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#FCA5A5" />
+        <stop offset="100%" stopColor="#818CF8" />
+      </linearGradient>
+      <linearGradient id="gradient7" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="50%" stopColor="#C084FC" />
+        <stop offset="100%" stopColor="#F472B6" />
+      </linearGradient>
+    </defs>
   </svg>
-)
-export default Logo
+);
+export default Logo;

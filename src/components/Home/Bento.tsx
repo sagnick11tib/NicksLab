@@ -46,7 +46,7 @@ const Bento = () => {
         </div>
         <div className="col-span-3 md:ml-3">
         <FavouriteGame />
-          <div className="flex gap-3 ">
+          <div className="flex gap-3 relative bottom-5">
            <DiscordStatusCard />
 
             {/* <ImagesCard /> */}  

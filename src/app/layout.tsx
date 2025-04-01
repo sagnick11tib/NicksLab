@@ -16,7 +16,7 @@ const info = {
   description:
     'I am a software engineer and a full-stack developer. I love to build things that make life easier.',
   url: 'https://nickslab.live',
-  image: '/images/RohitSinghRawat.png',
+  image: '/images/maindp.jpg',
 }
 
 export const metadata: Metadata = {
