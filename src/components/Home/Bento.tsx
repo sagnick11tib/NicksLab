@@ -7,6 +7,7 @@ import GithubStats from "./Cabinet/GithubStatsClient";
 import GithubStatsServer from "./Cabinet/GithubStatsServer";
 import KrishnaLinkCard from "./Cabinet/KrishnaLinkCard";
 import LinkedinCard from "./Cabinet/LinkedinCard";
+import MusicCard from "./Cabinet/MusicCard";
 import RandomCard from "./Cabinet/RandomCard";
 import StacksCard from "./Cabinet/StacksCard";
 import WakatimeStatsCard from "./Cabinet/WakatimeStatsCard";
@@ -48,8 +49,7 @@ const Bento = () => {
         <FavouriteGame />
           <div className="flex gap-3 relative bottom-5">
            <DiscordStatusCard />
-
-            {/* <ImagesCard /> */}  
+           <MusicCard />
           </div>
         </div>
         </div>
