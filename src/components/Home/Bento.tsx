@@ -42,7 +42,7 @@ const Bento = () => {
         </div>
         <div className="cols-span-3 ">
             <StacksCard />
-          </div>
+        </div>
         </div>
         <div className="col-span-3 md:ml-3">
         <FavouriteGame />
