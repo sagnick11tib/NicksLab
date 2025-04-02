@@ -13,11 +13,11 @@ interface Song {
 
 const songs: Song[] = [
   {
-    title: "Midnight Jazz",
-    artist: "Luna Brooks",
+    title: "7 Rings",
+    artist: "Ariana Grande",
     cover:
-      "https://images.unsplash.com/photo-1453090927415-5f45085b65c0?w=400&h=400&fit=crop",
-    url: "/path-to-your-song1.mp3",
+      "/music/sevenimage.png",
+    url: "/music/7rings.mp3",
   },
   {
     title: "Ocean Waves",
@@ -122,7 +122,7 @@ const MusicCard = () => {
     <motion.div
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className="w-52 h-36 bg-white dark:bg-gray-800 rounded-lg shadow-xl relative overflow-hidden p-2"
+      className="w-52 h-36 bg-white dark:bg-[#0D1117] rounded-lg  relative overflow-hidden p-2 scale-105"
     >
       <div className="flex h-full">
         <div className="relative w-1/3">
@@ -134,7 +134,8 @@ const MusicCard = () => {
                 ? { repeat: Infinity, duration: 3, ease: "linear" }
                 : { duration: 0.3 }
             }
-            whileHover={{ scale: 1.05 }}
+
+           
           >
             <img
               src={currentSong.cover}
