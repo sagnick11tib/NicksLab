@@ -23,6 +23,25 @@ export default Logo;
 
 
 
+/* 
+ <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={522.667}
+    height={333.333}
+    viewBox="0 0 392 250"
+    {...props}
+  >
+    <motion.path
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      d="M20 150 C50 50, 150 50, 180 150 S300 250, 350 150"
+    />
+  </svg>
+*/
+
+
+
 
 
 

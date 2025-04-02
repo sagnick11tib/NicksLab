@@ -50,7 +50,7 @@ const statusConfigs: Record<StatusType, StatusConfig> = {
 };
 
 const DiscordStatusCard = () => {
-  const [status, setStatus] = useState<StatusType>('offline');
+  const [status, setStatus] = useState<StatusType>('online');
   const config = statusConfigs[status];
 
   // For demo purposes - cycle through statuses
