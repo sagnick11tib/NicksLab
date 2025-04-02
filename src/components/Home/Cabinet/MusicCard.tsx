@@ -122,7 +122,7 @@ const MusicCard = () => {
     <motion.div
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className="w-64 sm:w-52 h-36 bg-white dark:bg-[#0D1117] rounded-lg  relative overflow-hidden p-2 scale-105"
+      className="w-72 sm:w-52 h-36 bg-white dark:bg-[#0D1117] rounded-lg  relative overflow-hidden p-2 scale-105"
     >
       <div className="flex h-full">
         <div className="relative w-1/3">
