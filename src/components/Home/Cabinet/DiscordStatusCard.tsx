@@ -61,7 +61,7 @@ const DiscordStatusCard = () => {
     setStatus(statuses[nextIndex]);
   };
   return (
-    <div className="w-24 h-36 relative hover:scale-95 transform-gpu duration-500 bg-white dark:bg-[#151947] rounded-xl overflow-hidden cursor-pointer" onClick={cycleStatus}>
+    <div className="w-32 sm:w-24 h-36 relative hover:scale-95 transform-gpu duration-500 bg-white dark:bg-[#151947] rounded-xl overflow-hidden cursor-pointer" onClick={cycleStatus}>
     {/* Animated gradient background */}
     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10 dark:from-blue-400/20 dark:via-indigo-400/20 dark:to-purple-400/20 animate-gradient" />
     
