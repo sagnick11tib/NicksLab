@@ -10,7 +10,7 @@ const GithubCard = () => {
     whileTap={{ scale: 1 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
     className="relative h-36 w-full group flex flex-col justify-between overflow-hidden rounded-2xl text-white transform-gpu will-change-[outline,_transform]"
-    href="http://github.com/vimfn"
+    href="http://github.com/sagnick11tib"
     target="_blank"
     rel="noreferrer"
   >
