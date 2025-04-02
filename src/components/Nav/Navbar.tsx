@@ -10,7 +10,7 @@ import { navItems } from '@/lib/constants'
 
 
 const NavBar = () => {
-  const path = usePathname()
+  const path = usePathname();
 
   return (
     <div className="flex w-full flex-col items-end justify-between p-4 md:px-10">

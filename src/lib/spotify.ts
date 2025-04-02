@@ -140,7 +140,6 @@ export const getNowPlaying = async (): Promise<NowPlayingData | string | null> =
       artistUrl,
     };
   } catch (error) {
-    console.error("Error fetching currently playing song: ", error);
     return error instanceof Error ? error.message : "An unknown error occurred";
   }
 };
@@ -180,7 +179,6 @@ export const getTopTracks = async (): Promise<
 
     return { tracks };
   } catch (error) {
-    console.error("Error fetching top tracks: ", error);
     return error instanceof Error ? error.message : "An unknown error occurred";
   }
 };
@@ -223,7 +221,6 @@ export const getRecentlyPlayed = async (): Promise<
 
     return { tracks };
   } catch (error) {
-    console.error("Error fetching recently played tracks: ", error);
     return error instanceof Error ? error.message : "An unknown error occurred";
   }
 };
