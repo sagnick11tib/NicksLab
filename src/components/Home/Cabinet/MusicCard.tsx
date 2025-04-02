@@ -134,8 +134,6 @@ const MusicCard = () => {
                 ? { repeat: Infinity, duration: 3, ease: "linear" }
                 : { duration: 0.3 }
             }
-
-           
           >
             <img
               src={currentSong.cover}
