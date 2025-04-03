@@ -31,7 +31,7 @@ const page = () => {
                 className="prose prose-lg dark:prose-invert"
               >
                 <p className="text-gray-600 dark:text-gray-300">
-                  We're crafting something special for you. A new digital experience that will
+                We&apos;re crafting something special for you. A new digital experience that will
                   transform the way you interact with content.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
