@@ -7,7 +7,6 @@ import { Providers } from './Providers'
 import { cath, lombok, neu } from '@/lib/font'
 import { Toaster } from 'sonner'
 import { Analytics } from '@/components/shared/Analytics'
-//import { Analytics } from '@/components/shared/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
