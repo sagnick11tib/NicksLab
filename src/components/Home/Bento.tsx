@@ -7,6 +7,7 @@ import GithubStats from "./Cabinet/GithubStatsClient";
 import GithubStatsServer from "./Cabinet/GithubStatsServer";
 import KrishnaLinkCard from "./Cabinet/KrishnaLinkCard";
 import LinkedinCard from "./Cabinet/LinkedinCard";
+import MotivateCard from "./Cabinet/MotivateCard";
 import MusicCard from "./Cabinet/MusicCard";
 import RandomCard from "./Cabinet/RandomCard";
 import StacksCard from "./Cabinet/StacksCard";
@@ -51,6 +52,7 @@ const Bento = () => {
            <DiscordStatusCard />
            <MusicCard />
           </div>
+          <MotivateCard />
         </div>
         </div>
       </div>
