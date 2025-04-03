@@ -33,19 +33,21 @@ const MusicCard = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(0.75);
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-  const volumeRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null); // Reference to the audio element
+  const progressRef = useRef<HTMLDivElement>(null); // Reference to the progress bar
+  const volumeRef = useRef<HTMLDivElement>(null); // Reference to the volume bar
+  //UseRef is used for DOM elements that we want to manipulate directly like the <audio> element and the <div> elements for progress and volume bars.
 
   const currentSong = songs[currentSongIndex];
 
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
+    const audio = audioRef.current;// Get the current audio element
 
-    const updateProgress = () => {
-      const value = (audio.currentTime / audio.duration) * 100;
-      setProgress(isNaN(value) ? 0 : value);
+    if (!audio) return;// menans no audio element is found
+
+    const updateProgress = () => { // Update the progress bar as the audio plays
+      const value = (audio.currentTime / audio.duration) * 100; // Calculate the percentage of the audio that has played
+      setProgress(isNaN(value) ? 0 : value);// Set the progress state to the calculated value or 0 if it's NaN
     };
 
     audio.addEventListener("timeupdate", updateProgress);
