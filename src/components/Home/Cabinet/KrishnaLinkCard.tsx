@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const KrishnaLinkCard = () => {
     return (
-        <Link href={"/radha"}>
+        <Link href={"/playground"}>
           <div className="h-36 group rounded-lg hover:scale-95 duration-500 transform-gpu relative">
             <Image
               className="absolute object-cover inset-0 w-full h-full -z-40 rounded-lg brightness-75 dark:brightness-50"
