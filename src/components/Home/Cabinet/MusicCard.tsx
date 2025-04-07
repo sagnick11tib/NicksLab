@@ -20,12 +20,19 @@ const songs: Song[] = [
     url: "/music/7rings.mp3",
   },
   {
-    title: "Ocean Waves",
-    artist: "The Twilight Band",
+    title: "295",
+    artist: "Sidhu Moose Wala",
     cover:
-      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
-    url: "/path-to-your-song2.mp3",
+      "/music/295sidhu.jpg",
+    url: "/music/TwoNintyFive.mp3",
   },
+  {
+    title: "Die With A Smile",
+    artist: "Lady Gaga",
+    cover:
+      "/music/DieWithASmile.jpg",
+    url: "/music/DieWithASmile.m4a",
+  }
 ];
 
 const MusicCard = () => {
