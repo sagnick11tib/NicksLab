@@ -1,5 +1,5 @@
 
-const SpacingWhale = () => (
+const Octopas = () => (
 <div className="relative size-12 -left-4 -bottom-2 inline-flex flex-col items-end justify-end">
       <svg viewBox="0 0 200 200" className="w-full h-full">
         <circle cx="100" cy="100" r="50" fill="#6A5ACD" />
@@ -23,5 +23,5 @@ const SpacingWhale = () => (
       </svg>
     </div>
   )
-  export { SpacingWhale }
+  export default Octopas;
   
