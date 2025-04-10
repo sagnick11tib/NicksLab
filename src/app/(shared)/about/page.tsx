@@ -12,7 +12,7 @@ import AboutMySelf from "@/components/About/AboutMySelf";
 import AboutBento from "@/components/About/AboutBento";
 import { SVGProps } from "react";
 import { Css3, Express, Figma, FramerMotion, Html5, Javascript, NextJS, NodeJs, Python, ReactLogo, Redux, ShadcnUI, TailwindCss, TypeScript, } from "@/components/Icons/SkillIcon/AboutIcon";
-import CdBack from "@/components/shared/Cdback";
+import CdBack from "@/components/shared/CdBack";
 
 export const metadata: Metadata = {
   title: "About",
