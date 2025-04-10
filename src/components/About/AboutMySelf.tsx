@@ -38,9 +38,7 @@ const AboutMySelf = () => {
               <span className="bg-gradient-to-l from-green-300 to-indigo-500 bg-clip-text text-transparent">
                 CI/CD
               </span>
-              , and brushing up on DSA and system design to stay sharp. Outside
-              of code, I’m an audiophile and love reading spiritual books that
-              bring clarity and peace.
+              , and brushing up on DSA and system design to stay sharp. 
             </p>
             <br />
             <p>
