@@ -10,6 +10,9 @@ import p4 from "@/../../public/images/picturefour.jpg";
 import type { Metadata } from "next";
 import AboutMySelf from "@/components/About/AboutMySelf";
 import AboutBento from "@/components/About/AboutBento";
+import { SVGProps } from "react";
+import { Css3, Express, Figma, FramerMotion, Html5, Javascript, NextJS, NodeJs, Python, ReactLogo, Redux, ShadcnUI, TailwindCss, TypeScript, } from "@/components/Icons/SkillIcon/AboutIcon";
+import CdBack from "@/components/shared/Cdback";
 
 export const metadata: Metadata = {
   title: "About",
@@ -65,18 +68,74 @@ const page = () => {
 
      <AboutBento 
      tabs = {[
-      {title: "Frontend", value: "frontend", content: <p>Frontend</p>},
-      {title: "Backend", value: "backend", content: <p>Backend</p>},
+      {title: "Frontend", value: "frontend", content: <FrontendContent />},
+      {title: "Backend", value: "backend", content: <BackendContent />},
       {title: "DevOps", value: "devops", content: <p>DevOps</p>},
       {title: "GenAI", value: "genai", content: <p>GenAI</p>},
      ]}
      />
-
+    <CdBack />
     </section>
   );
 };
 
 export default page;
+
+const FrontendContent = () => {
+  const skills = [
+   // { icon: <Html5 width={32} height={32} />, name: "HTML5" },
+   // { icon: <Css3 width={32} height={32} />, name: "CSS3" },
+    // { icon: <Javascript width={32} height={32} />, name: "JavaScript" },
+    { icon: <TypeScript width={32} height={32} />, name: "TypeScript" },
+    { icon: <ReactLogo width={32} height={32} />, name: "React" },
+    { icon: <NextJS width={32} height={32} />, name: "Next.js" },
+    { icon: <TailwindCss width={32} height={32} />, name: "Tailwind" },
+    { icon: <FramerMotion width={32} height={32} />, name: "Framer" },
+    { icon: <Figma width={32} height={32} />, name: "Figma" },
+    { icon: <Redux width={32} height={32} />, name: "Redux" },
+    { icon: <ShadcnUI width={32} height={32} />, name: "Shadcn" },
+  ];
+
+  return (
+    <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 p-6">
+      {skills.map((skill) => (
+        <div
+          key={skill.name}
+          className="flex flex-col items-center justify-center p-3 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
+        >
+          <div className="mb-2 text-white group-hover:scale-110 transition-transform duration-300">
+            {skill.icon}
+          </div>
+          <span className="text-sm font-medium text-white/90">{skill.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const BackendContent = () => {
+  const skills = [
+    { icon: <NodeJs width={32} height={32} />, name: "Node.js" },
+    { icon: <Python width={32} height={32} />, name: "Python" },
+    { icon: <Express width={32} height={32} />, name: "Express" },
+  ];
+
+  return (
+    <div className="grid grid-cols-3 gap-6 p-6">
+      {skills.map((skill) => (
+        <div
+          key={skill.name}
+          className="flex flex-col items-center justify-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
+        >
+          <div className="mb-2 text-white group-hover:scale-110 transition-transform duration-300">
+            {skill.icon}
+          </div>
+          <span className="text-sm font-medium text-white/90">{skill.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 
 
