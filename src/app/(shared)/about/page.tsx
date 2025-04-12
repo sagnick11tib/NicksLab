@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 import AboutMySelf from "@/components/About/AboutMySelf";
 import AboutBento from "@/components/About/AboutBento";
 import { SVGProps } from "react";
-import { Css3, Express, Figma, FramerMotion, Html5, Javascript, NextJS, NodeJs, Python, ReactLogo, Redux, ShadcnUI, TailwindCss, TypeScript, } from "@/components/Icons/SkillIcon/AboutIcon";
+import { Css3, Express, Figma, FramerMotion, Html5, Javascript, MernStack, NextJS, NodeJs, Python, ReactLogo, Redux, ShadcnUI, TailwindCss, TypeScript, } from "@/components/Icons/SkillIcon/AboutIcon";
 import CdBack from "@/components/shared/CdBack";
 
 export const metadata: Metadata = {
@@ -83,25 +83,17 @@ export default page;
 
 const FrontendContent = () => {
   const skills = [
-   // { icon: <Html5 width={32} height={32} />, name: "HTML5" },
-   // { icon: <Css3 width={32} height={32} />, name: "CSS3" },
-    // { icon: <Javascript width={32} height={32} />, name: "JavaScript" },
+    { icon: <MernStack /> },
     { icon: <TypeScript width={32} height={32} />, name: "TypeScript" },
-    { icon: <ReactLogo width={32} height={32} />, name: "React" },
-    { icon: <NextJS width={32} height={32} />, name: "Next.js" },
-    { icon: <TailwindCss width={32} height={32} />, name: "Tailwind" },
-    { icon: <FramerMotion width={32} height={32} />, name: "Framer" },
-    { icon: <Figma width={32} height={32} />, name: "Figma" },
-    { icon: <Redux width={32} height={32} />, name: "Redux" },
     { icon: <ShadcnUI width={32} height={32} />, name: "Shadcn" },
   ];
 
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 p-6">
+    <div className="grid grid-cols-3 gap-6 p-6">
       {skills.map((skill) => (
         <div
           key={skill.name}
-          className="flex flex-col items-center justify-center p-3 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
+          className="flex flex-col items-center justify-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
         >
           <div className="mb-2 text-white group-hover:scale-110 transition-transform duration-300">
             {skill.icon}

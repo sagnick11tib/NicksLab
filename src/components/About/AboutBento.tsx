@@ -14,7 +14,7 @@ const AboutBento = ({ tabs }: { tabs: Tab[] }) => {
 
   return (
     <div className="mt-12 md:mt-12 md:col-span-2 h-[200px] max-w-full bg-[url('/images/Hero@2x.png'),_linear-gradient(to_top_right,#0E95EE,#27C9F5)] dark:bg-[url('/images/HeroDark@2x.png'),_linear-gradient(to_top_right,#07384B,#0F536E)] bg-cover bg-bottom rounded-2xl shadow-outline dark:shadow-outline-bright overflow-hidden">
-      <div className="relative flex p-2 sm:p-4 sm:gap-2 ">
+      <div className="relative flex p-2 sm:p-4 sm:gap-2">
         {tabs.map((tab) => (
           <button
             key={tab.value}
