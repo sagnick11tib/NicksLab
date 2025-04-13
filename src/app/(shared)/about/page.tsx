@@ -10,8 +10,7 @@ import p4 from "@/../../public/images/picturefour.jpg";
 import type { Metadata } from "next";
 import AboutMySelf from "@/components/About/AboutMySelf";
 import AboutBento from "@/components/About/AboutBento";
-import { SVGProps } from "react";
-import { Css3, Express, Figma, FramerMotion, Html5, Javascript, MernStack, NextJS, NodeJs, Python, ReactLogo, Redux, ShadcnUI, TailwindCss, TypeScript, } from "@/components/Icons/SkillIcon/AboutIcon";
+import { DevOps, Express, MernStack, NodeJs, Python, Tools } from "@/components/Icons/SkillIcon/AboutIcon";
 import CdBack from "@/components/shared/CdBack";
 
 export const metadata: Metadata = {
@@ -68,8 +67,8 @@ const page = () => {
 
      <AboutBento 
      tabs = {[
-      {title: "Frontend", value: "frontend", content: <FrontendContent />},
-      {title: "Backend", value: "backend", content: <BackendContent />},
+      {title: "Skills", value: "skills", content: <Skills />},
+      {title: "Projects", value: "projects", content: <Projects />},
       {title: "DevOps", value: "devops", content: <p>DevOps</p>},
       {title: "GenAI", value: "genai", content: <p>GenAI</p>},
      ]}
@@ -81,11 +80,13 @@ const page = () => {
 
 export default page;
 
-const FrontendContent = () => {
+const Skills = () => {
   const skills = [
-    { icon: <MernStack /> },
-    { icon: <TypeScript width={32} height={32} />, name: "TypeScript" },
-    { icon: <ShadcnUI width={32} height={32} />, name: "Shadcn" },
+    { icon: <MernStack />, name: "MERN Stack" },
+    { icon: <DevOps />, name: "DevOps" },
+    { icon: <Tools />, name: "Tools" },
+
+   
   ];
 
   return (
@@ -95,17 +96,16 @@ const FrontendContent = () => {
           key={skill.name}
           className="flex flex-col items-center justify-center p-4 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
         >
-          <div className="mb-2 text-white group-hover:scale-110 transition-transform duration-300">
+          <div className="my-3 text-white group-hover:scale-110 transition-transform duration-300">
             {skill.icon}
           </div>
-          <span className="text-sm font-medium text-white/90">{skill.name}</span>
         </div>
       ))}
     </div>
   );
 };
 
-const BackendContent = () => {
+const Projects = () => {
   const skills = [
     { icon: <NodeJs width={32} height={32} />, name: "Node.js" },
     { icon: <Python width={32} height={32} />, name: "Python" },

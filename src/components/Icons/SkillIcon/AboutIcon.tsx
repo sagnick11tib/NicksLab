@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { SVGProps } from "react";
 import  M  from "../../../../public/images/MERNpng2.png"
+import D from "../../../../public/images/devops.png"
+import T from "../../../../public/images/tools.png"
 
 export const Html5 = (props: SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -99,6 +101,33 @@ export const Html5 = (props: SVGProps<SVGSVGElement>) => (
       width={68}
       height={68}
       className="object-contain"
+      {...props}
+    />
+    </div>
+  );
+
+  export const DevOps = (props: any) => (
+    <div className="flex items-center justify-center scale-[1.6]">
+    <Image
+      src={D}
+      alt="DevOps"
+      width={72}
+      height={72}
+      className="object-contain"
+      {...props}
+    />
+    </div>
+  )
+
+  export const Tools = (props: any) => (
+    <div className="flex items-center justify-center scale-[1.6]">
+    <Image
+      src={T}
+      alt="Tools"
+      width={72}
+      height={72}
+      className="object-contain"
+      {...props}
     />
     </div>
   )
