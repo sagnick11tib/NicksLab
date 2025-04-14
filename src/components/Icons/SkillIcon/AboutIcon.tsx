@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { SVGProps } from "react";
-import  M  from "../../../../public/images/MERNpng2.png"
+import M  from "../../../../public/images/MERNpng2.png"
 import D from "../../../../public/images/devops.png"
 import T from "../../../../public/images/tools.png"
+import MINI from "../../../../public/images/ministore.png"
+import N from "../../../../public/images/nickslab.png"
+import P from "../../../../public/images/plant.png"
 
 export const Html5 = (props: SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -129,6 +132,45 @@ export const Html5 = (props: SVGProps<SVGSVGElement>) => (
       className="object-contain"
       {...props}
     />
+    </div>
+  )
+
+  export const MiniStore = (props: any) => (
+    <div className="flex items-center justify-center scale-[1.6]">
+      <Image
+        src={MINI}
+        alt="Mini Store"
+        width={72}
+        height={72}
+        className="object-contain"
+        {...props}
+      />
+    </div>
+  )
+
+  export const NicksLab = (props: any) => (
+    <div className="flex items-center justify-center scale-[1.6]">
+      <Image
+        src={N}
+        alt="Nicks Lab"
+        width={72}
+        height={72}
+        className="object-contain"
+        {...props}
+      />
+    </div>
+  )
+
+  export const PlantWateringSystem = (props: any) => (
+    <div className="flex items-center justify-center scale-[1.6]">
+      <Image
+        src={P}
+        alt="Plant Watering System"
+        width={72}
+        height={72}
+        className="object-contain"
+        {...props}
+      />
     </div>
   )
   
